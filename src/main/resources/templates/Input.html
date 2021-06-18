@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Input</title>
+</head>
+<body>
+<h1>Input</h1>
+<form action="Output.html" th:action="@{Process}" th:object="${rps}">
+
+  <p>
+      <label><input type="radio" th:field="*{item}" th:value="0">Purr</label>
+      <label><input type="radio" th:field="*{item}" th:value="1">Mew</label>
+      <label><input type="radio" th:field="*{item}" th:value="2">Hiss</label>
+  </p>
+    <p>
+        <input type="submit">
+    </p>
+</form>
+</body>
+</html>
