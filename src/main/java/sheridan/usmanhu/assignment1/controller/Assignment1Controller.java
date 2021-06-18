@@ -29,7 +29,7 @@ public class Assignment1Controller {
         logger.trace("process() is called");
         logger.debug("item = " + rps);
         if(bindingResult.hasErrors()){
-            return new ModelAndView("Input");
+            return new ModelAndView("Input","rps",rps);
         }
         return new ModelAndView("Output", "rps", rps);
     }
