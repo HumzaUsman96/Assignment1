@@ -19,7 +19,7 @@ public class Assignment1Controller {
     public ModelAndView input(@ModelAttribute rpsGame rps){
         logger.trace("input() is called");
         logger.debug(""+rps.getItem());
-        return new ModelAndView("Input");
+        return new ModelAndView("Input","rps",rps);
     }
 
     @GetMapping("/Process")
