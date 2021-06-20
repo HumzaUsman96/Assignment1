@@ -6,7 +6,7 @@
     <title>Input</title>
 </head>
 <body>
-<h1>Input</h1>
+<h1>Choose</h1>
 <form action="Output.html" th:action="@{Process}" th:object="${rpsGame}">
     <div th:if="${#fields.hasErrors('*')}">
         <h3 class="error">Input Errors</h3>
@@ -14,7 +14,7 @@
             <li class="error" th:each="e: ${#fields.errors('*')}" th:text="${e}">Input Error</li>
         </ul>
     </div>
-    <h2>Message</h2>
+    <h2>Rock Paper or Scissors</h2>
     <p>
         <label><input type="radio" th:field="*{item}" th:value="0">Rock</label>
         <label><input type="radio" th:field="*{item}" th:value="1">Paper</label>
@@ -22,7 +22,7 @@
     </p>
 
     <p>
-        <input type="submit">
+        <input type="submit" value="Play">
     </p>
 </form>
 </body>

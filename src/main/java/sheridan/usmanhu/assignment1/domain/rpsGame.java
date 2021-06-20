@@ -10,9 +10,10 @@ import java.io.Serializable;
         @Min(0)
         @Max(2)
         private int item = 0;
-
+        private int comp;
 
         public rpsGame() {
+            comp= (int) (3 * Math.random());
         }
 
         public int getItem() {
@@ -23,12 +24,19 @@ import java.io.Serializable;
             this.item = item;
         }
 
+        public int getComp() {
+            return comp;
+        }
+
+        public void setComp(int comp) {
+            this.comp = comp;
+        }
 
         @Override
         public String toString() {
             return "rpsGame{" +
                     "item=" + item +
-
+                    "comp="+comp+
                     '}';
         }
     }

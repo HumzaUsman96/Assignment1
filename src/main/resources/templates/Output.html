@@ -6,12 +6,19 @@
 </head>
 <body>
 <h1>Output</h1>
-<h2>Message</h2>
+<h2>You choose</h2>
 
 <div th:switch="${rpsGame.item}">
   <p th:case="0">Rock</p>
   <p th:case="1">Paper</p>
   <p th:case="*">Scissors</p>
+
+</div>
+<h2>Computer choose</h2>
+<div th:switch="${rpsGame.comp}">
+    <p th:case="0">Rock</p>
+    <p th:case="1">Paper</p>
+    <p th:case="*">Scissors</p>
 
 </div>
 
