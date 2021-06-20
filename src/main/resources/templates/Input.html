@@ -8,6 +8,17 @@
 <h1>Input</h1>
 <form action="Output.html" th:action="@{Process}" th:object="${rps}">
 
+    <div th:if="${#fields.hasErrors('${Input}')}">
+    <p>Hello</p>
+    </div>
+
+    <div th:if="${#fields.hasErrors('*')}">
+        <h3 class="error">Input Errors</h3>
+        <ul>
+            <li>Input Error</li>
+        </ul>
+    </div>
+
   <p>
       <label><input type="radio" th:field="*{item}" th:value="0">Rock</label>
       <label><input type="radio" th:field="*{item}" th:value="1">Paper</label>
