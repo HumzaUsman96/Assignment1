@@ -16,21 +16,23 @@ public class Assignment1Controller {
     private final Logger logger = LoggerFactory.getLogger(Assignment1Controller.class);
 
     @GetMapping(value={"/", "/Input"})
-    public ModelAndView input(@ModelAttribute rpsGame rps){
+    public ModelAndView input(@ModelAttribute rpsGame rpsGame){
         logger.trace("input() is called");
-        logger.debug(""+rps.getItem());
-        return new ModelAndView("Input","rps",rps);
+        logger.debug(""+rpsGame.getItem());
+        return new ModelAndView("Input","rpsGame",rpsGame);
     }
 
     @GetMapping("/Process")
     public ModelAndView process(
-            @Validated @ModelAttribute rpsGame rps,
+            @Validated @ModelAttribute rpsGame rpsGame,
             BindingResult bindingResult){
         logger.trace("process() is called");
-        logger.debug("item = " + rps);
+        logger.debug("item = " + rpsGame);
         if(bindingResult.hasErrors()){
-            return new ModelAndView("Input","rps",rps);
+            logger.trace("Error was called");
+            logger.debug(""+rpsGame);
+            return new ModelAndView("Input");
         }
-        return new ModelAndView("Output", "rps", rps);
+        return new ModelAndView("Output", "rpsGame", rpsGame);
     }
 }
