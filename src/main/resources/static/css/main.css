@@ -1,0 +1,20 @@
+h1{
+    color: darkslateblue;
+}
+h2 {
+    color: orange;
+}
+
+h2.win{
+    color: green;
+}
+h2.lose{
+    color: red;
+}
+h2.tie{
+    color: brown;
+}
+
+li.error{
+    color:red;
+}

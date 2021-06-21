@@ -2,6 +2,8 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="../static/css/main.css" th:href="@{/css/main.css}">
+
     <title>Title</title>
 </head>
 <body>
@@ -24,13 +26,13 @@
 
 <div>
 <h2 th:if="${(rpsGame.item==0 and rpsGame.comp==2)or (rpsGame.item==1 and rpsGame.comp==0)or
-(rpsGame.item==2 and rpsGame.comp==1)}">YOU WIN!!!!</h2>
+(rpsGame.item==2 and rpsGame.comp==1)}" class="win">YOU WIN!!!!</h2>
 
     <h2 th:if="${(rpsGame.comp==0 and rpsGame.item==2)or (rpsGame.comp==1 and rpsGame.item==0)or
-(rpsGame.comp==2 and rpsGame.item==1)}">YOU LOSE :(</h2>
+(rpsGame.comp==2 and rpsGame.item==1)}" class="lose">YOU LOSE :(</h2>
 
     <h2 th:if="${(rpsGame.item==0 and rpsGame.comp==0)or (rpsGame.item==1 and rpsGame.comp==1)or
-(rpsGame.item==2 and rpsGame.comp==2)}">TIE!!</h2>
+(rpsGame.item==2 and rpsGame.comp==2)}" class="tie">TIE!!</h2>
 </div>
 
 <a href="Input.html" th:href="@{/Input}" >Input</a>
