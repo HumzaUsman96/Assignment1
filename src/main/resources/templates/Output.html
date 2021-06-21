@@ -22,6 +22,17 @@
 
 </div>
 
+<div>
+<h2 th:if="${(rpsGame.item==0 and rpsGame.comp==2)or (rpsGame.item==1 and rpsGame.comp==0)or
+(rpsGame.item==2 and rpsGame.comp==1)}">YOU WIN!!!!</h2>
+
+    <h2 th:if="${(rpsGame.comp==0 and rpsGame.item==2)or (rpsGame.comp==1 and rpsGame.item==0)or
+(rpsGame.comp==2 and rpsGame.item==1)}">YOU LOSE :(</h2>
+
+    <h2 th:if="${(rpsGame.item==0 and rpsGame.comp==0)or (rpsGame.item==1 and rpsGame.comp==1)or
+(rpsGame.item==2 and rpsGame.comp==2)}">TIE!!</h2>
+</div>
+
 <a href="Input.html" th:href="@{/Input}" >Input</a>
 </body>
 </html>
