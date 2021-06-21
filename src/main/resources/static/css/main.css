@@ -18,3 +18,13 @@ h2.tie{
 li.error{
     color:red;
 }
+
+img.rpsimg{
+    height: 200px;
+    width: 15%;
+}
+
+img.rpsOutput{
+    height: 150px;
+    width: 15%;
+}
